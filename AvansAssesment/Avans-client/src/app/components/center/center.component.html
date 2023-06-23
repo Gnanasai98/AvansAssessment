@@ -1,0 +1,14 @@
+
+    <form (submit)="generateShortUrl()">
+    <label for="url">Enter a URL:</label>
+    <input type="text" id="url" name="url" [(ngModel)]="longUrl">
+    <button type="submit">Generate short URL</button>
+    </form>
+
+<br>
+<!--<form (submit)="redirectToLongUrl()">
+    <label>submit the generated url</label>
+    <input type="text" id="url" name="url" [(ngModel)]="shortUrl">
+    <button type="submit">Submit</button>
+</form>-->
+
