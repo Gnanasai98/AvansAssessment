@@ -1,122 +1,75 @@
-# -----------------------------------------------------------------
-# .gitignore
-# Bare Minimum Git
-# https://salferrarello.com/starter-gitignore-file/
-# ver 20221125
-#
-# From the root of your project run
-# curl -O https://gist.githubusercontent.com/salcode/10017553/raw/.gitignore
-# to download this file
-#
-# This file is tailored for a general web project, it
-# is NOT optimized for a WordPress project.  See
-# https://gist.github.com/salcode/b515f520d3f8207ecd04
-# for a WordPress specific .gitignore
-#
-# This file specifies intentionally untracked files to ignore
-# http://git-scm.com/docs/gitignore
-#
-# NOTES:
-# The purpose of gitignore files is to ensure that certain files not
-# tracked by Git remain untracked.
-#
-# To ignore uncommitted changes in a file that is already tracked,
-# use `git update-index --assume-unchanged`.
-#
-# To stop tracking a file that is currently tracked,
-# use `git rm --cached`
-#
-# Change Log:
-# 20221125 ignore /dist directory
-#          unignore /.git-blame-ignore-revs
-# 20220720 ignore /build directory
-# 20220128 unignore .nvmrc
-# 20210211 unignore .env.example
-# 20190705 ignore private/secret files
-# 20181206 remove trailing whitespaces
-# 20180714 unignore .phpcs.xml.dist
-# 20170502 unignore composer.lock
-# 20170502 ignore components loaded via Bower
-# 20150326 ignore jekyll build directory `/_site`
-# 20150324 Reorganized file to list ignores first and whitelisted last,
-#          change WordPress .gitignore link to preferred gist,
-#          add curl line for quick installation
-#          ignore composer files (vendor directory and lock file)
-# 20140606 Add .editorconfig as a tracked file
-# 20140418 remove explicit inclusion
-#          of readme.md (this is not an ignored file by default)
-# 20140407 Initially Published
-#
-# -----------------------------------------------------------------
+target/
+!.mvn/wrapper/maven-wrapper.jar
 
-# ignore all files starting with . or ~
-.*
-~*
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache/
 
-# ignore node/grunt dependency directories
-node_modules/
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-# Ignore build directories.
-/build
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+node/
+bin/
+
+# compiled output
 /dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
 
-# ignore composer vendor directory
-/vendor
+# dependencies
+/node_modules
 
-# ignore components loaded via Bower
-/bower_components
+# profiling files
+chrome-profiler-events*.json
 
-# ignore jekyll build directory
-/_site
-
-# ignore OS generated files
-ehthumbs.db
-Thumbs.db
-
-# ignore Editor files
-*.sublime-project
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
 *.sublime-workspace
-*.komodoproject
 
-# ignore log files and databases
-*.log
-*.sql
-*.sqlite
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
-# ignore compiled files
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-/src/main/resources/application.properties
+# misc
+/.angular/cache
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
 
-
-# ignore packaged files
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-# ignore private/secret files
-*.der
-*.key
-*.pem
-
-# --------------------------------------------------------
-# BEGIN Explictly Allowed Files (i.e. do NOT ignore these)
-# --------------------------------------------------------
-
-# track these files, if they exist
-!.editorconfig
-!.env.example
-!.git-blame-ignore-revs
-!.gitignore
-!.nvmrc
-!.phpcs.xml.dist
-backend/poc_springboot_2/src/main/resources/application.properties
+# System Files
+.DS_Store
+Thumbs.db
